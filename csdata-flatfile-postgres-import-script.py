@@ -58,8 +58,8 @@ def create_database_if_not_exists(dbname, user, password, host, port):
         conn = psycopg2.connect(
             dbname='postgres',  # Establish connection to the RDS instance via the administrative database
             user='postgres',
-            password='L^3WN4CNJeqPwTZu',
-            host='ds-database-postgres-161.ch7gieuydkdj.us-west-2.rds.amazonaws.com',
+            password='xxxxxxx',
+            host='xxxxxxxx',
             port=5432
         )
         conn.autocommit = True
@@ -87,7 +87,7 @@ def create_database_if_not_exists(dbname, user, password, host, port):
 
 # Function for UI button to initiate database connection
 def connect_to_database(dbname):
-    create_database_if_not_exists(dbname, 'postgres', 'L^3WN4CNJeqPwTZu', 'ds-database-postgres-161.ch7gieuydkdj.us-west-2.rds.amazonaws.com', 5432)
+    create_database_if_not_exists(dbname, 'postgres', 'xxxxxxx', 'xxxxxxxx', 5432)
 
 # --------------------------------------------------------------------------------------- CREATE TABLE FROM FILE FUNCTION
 
@@ -202,7 +202,7 @@ def import_files(dbname):
     tables_imported = 0 # Establish count of how many files successfully imported as tables
 
     # Connect to PostgreSQL and create the database if it doesn't exist
-    #create_database_if_not_exists(dbname, 'postgres', 'L^3WN4CNJeqPwTZu', 'ds-database-postgres-161.ch7gieuydkdj.us-west-2.rds.amazonaws.com', 5432)
+    #create_database_if_not_exists(dbname, 'postgres', 'xxxxxxxxx', 'xxxxxxxx', 5432)
 
     # Open folder dialog to select folder containing files
     folder_path = filedialog.askdirectory()  
